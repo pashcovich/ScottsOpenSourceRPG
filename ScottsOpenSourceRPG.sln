@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottsOpenSourceRPG", "ScottsOpenSourceRPG\ScottsOpenSourceRPG.csproj", "{0404761D-11A4-41C7-A472-A7A782B9E3BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{42E155CD-CB7B-4B1C-8287-A7C622829AB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEditor", "GameEditor\GameEditor.csproj", "{09BF4597-20C4-4B12-BB7C-24A4B6EAEFC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0404761D-11A4-41C7-A472-A7A782B9E3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0404761D-11A4-41C7-A472-A7A782B9E3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0404761D-11A4-41C7-A472-A7A782B9E3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0404761D-11A4-41C7-A472-A7A782B9E3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E155CD-CB7B-4B1C-8287-A7C622829AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E155CD-CB7B-4B1C-8287-A7C622829AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E155CD-CB7B-4B1C-8287-A7C622829AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E155CD-CB7B-4B1C-8287-A7C622829AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09BF4597-20C4-4B12-BB7C-24A4B6EAEFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09BF4597-20C4-4B12-BB7C-24A4B6EAEFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09BF4597-20C4-4B12-BB7C-24A4B6EAEFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09BF4597-20C4-4B12-BB7C-24A4B6EAEFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
