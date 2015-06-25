@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,24 +17,24 @@ using System.Windows.Shapes;
 namespace ScottsOpenSourceRPG
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for About.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class About : Window
     {
-        public MainWindow()
+        public About()
         {
             InitializeComponent();
         }
 
-        private void MenuItem_Exit_OnClick(object sender, RoutedEventArgs e)
+        private void Hyperlink_License_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            Close();
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
         }
 
-        private void MenuItem_About_OnClick(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            About aboutScreen = new About();
-            aboutScreen.ShowDialog();
+            Close();
         }
     }
 }

@@ -2,7 +2,23 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Scott's Open Source RPG" Height="350" Width="525">
-    <Grid>
-        
+
+    <Grid Margin="0,0,0,293">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="387*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Margin="0,1,0,0" Grid.ColumnSpan="2">
+            <MenuItem Header="_File" IsCheckable="False">
+                <MenuItem Header="_Load" IsCheckable="False"/>
+                <Separator/>
+                <MenuItem Header="E_xit" IsCheckable="False" Click="MenuItem_Exit_OnClick"/>
+            </MenuItem>
+            <MenuItem Header="_Help" IsCheckable="False">
+                <MenuItem Header="_View Help" IsCheckable="False"/>
+                <Separator/>
+                <MenuItem Header="_About" IsCheckable="False" Click="MenuItem_About_OnClick"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
