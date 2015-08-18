@@ -6,8 +6,8 @@ namespace Engine.Entities
     {
         private readonly int _amountToHeal;
 
-        internal HealingPotion(Guid id, string name, string namePlural, int amountToHeal)
-            : base(id, name, namePlural)
+        internal HealingPotion(Guid id, string name, string namePlural, int amountToHeal, int minimumLevelToUse = 0, int maximumStackSize = 0)
+            : base(id, name, namePlural, minimumLevelToUse, maximumStackSize)
         {
             _amountToHeal = amountToHeal;
         }

@@ -1,28 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace GameEditor
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void GameData_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Weapons_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Armor_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Jewelry_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Potions_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Miscellaneous_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Monsters_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Skills_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Recipes_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Quests_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Locations_OnClick(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

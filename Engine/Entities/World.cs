@@ -1,42 +1,45 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
 using Engine.Collections;
-using Engine.Entities;
 
-namespace Engine
+namespace Engine.Entities
 {
-    public static class World
+    public class World
     {
-        private static readonly SortedListWithFloorAndCeilingIntegerKey<int> _levels = new SortedListWithFloorAndCeilingIntegerKey<int>();
+        private readonly SortedListWithFloorAndCeilingIntegerKey<int> _levels = new SortedListWithFloorAndCeilingIntegerKey<int>();
 
         private const int WORLD_SIZE = 29;
         private const int MIDPOINT = (WORLD_SIZE / 2);
 
-        private static readonly List<Location> _locations = new List<Location>();
+        private readonly List<Location> _locations = new List<Location>();
 
-        static World()
+        public string GameName { get; set; }
+        public string GameAuthor { get; set; }
+        public string GameCopyrightNotice { get; set; }
+        public string GameWebsiteURL { get; set; }
+
+        public World()
         {
             PopulateLevelsList();
             PopulateLocationList();
         }
 
-        public static int LevelForExperiencePoints(int experiencePoints)
+        public int LevelForExperiencePoints(int experiencePoints)
         {
             return _levels.FloorValueFor(experiencePoints);
         }
 
-        internal static Location LocationAtCoordinates(Coordinate coordinates)
+        internal Location LocationAtCoordinates(Coordinate coordinates)
         {
             return _locations.SingleOrDefault(loc => loc.Coordinates.Match(coordinates));
         }
 
-        internal static Location StartingLocation()
+        internal Location StartingLocation()
         {
             return _locations.Single(loc => loc.Coordinates.Match(new Coordinate(MIDPOINT, MIDPOINT)));
         }
 
-        private static void PopulateLevelsList()
+        private void PopulateLevelsList()
         {
             _levels.Add(0, 1);
             _levels.Add(100, 2);
@@ -50,15 +53,8 @@ namespace Engine
             _levels.Add(900, 10);
         }
 
-        private static void PopulateLocationList()
+        private void PopulateLocationList()
         {
-        }
-
-        private static void UpdateLocationTo(Location newLocation)
-        {
-            _locations.RemoveAll(loc => loc.Coordinates.Match(newLocation.Coordinates));
-
-            _locations.Add(newLocation);
         }
     }
 }

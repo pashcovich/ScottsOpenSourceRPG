@@ -1,16 +1,34 @@
 ﻿<Window x:Class="ScottsOpenSourceRPG.About"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="About" Height="175" Width="350" ResizeMode="NoResize">
+        Title="About" 
+        FontSize="12pt"
+        Width="380" Height="220">
 
     <Grid Margin="0,0,4,4">
-        <Label Content="Scott's Open Source RPG" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Version:" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
-        <Label Content="Copyright 2015, Scott Lilly" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
-        <Label HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top">
-            <Hyperlink NavigateUri="https://github.com/ScottLilly/ScottsOpenSourceRPG/blob/master/LICENSE" RequestNavigate="Hyperlink_License_RequestNavigate">Released under the MIT License</Hyperlink>
-        </Label>
-        <Button Content="Close" HorizontalAlignment="Left" Margin="255,112,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" RenderTransformOrigin="-0.2,-1.05"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" x:Name="lblGameName" Content="qwe" HorizontalAlignment="Left"/>
+        <Label Grid.Row="1" x:Name="lblGameVersion" Content="asd" HorizontalAlignment="Left"/>
+        <Label Grid.Row="2" x:Name="lblGameCopyright" Content="zxc" HorizontalAlignment="Left"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Game Engine:"/>
+            <Label Grid.Column="1" HorizontalAlignment="Left">
+                <Hyperlink NavigateUri="https://github.com/ScottLilly/ScottsOpenSourceRPG" RequestNavigate="Hyperlink_License_RequestNavigate">Scott's Open Source RPG Engine</Hyperlink>
+            </Label>
+        </Grid>
+        <Button Grid.Row="4" Content="Close" HorizontalAlignment="Right" Width="75" Padding="7" Click="Button_Click"/>
     </Grid>
 </Window>
