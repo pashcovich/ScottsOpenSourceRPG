@@ -1,11 +1,12 @@
 ﻿<Window x:Class="ScottsOpenSourceRPG.About"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="About" 
         FontSize="12pt"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
         Width="380" Height="220">
-
-    <Grid Margin="0,0,4,4">
+    
+    <Grid Margin="5,5,5,5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -13,22 +14,23 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" x:Name="lblGameName" Content="qwe" HorizontalAlignment="Left"/>
-        <Label Grid.Row="1" x:Name="lblGameVersion" Content="asd" HorizontalAlignment="Left"/>
-        <Label Grid.Row="2" x:Name="lblGameCopyright" Content="zxc" HorizontalAlignment="Left"/>
-        <Grid Grid.Row="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Content="Game Engine:"/>
-            <Label Grid.Column="1" HorizontalAlignment="Left">
-                <Hyperlink NavigateUri="https://github.com/ScottLilly/ScottsOpenSourceRPG" RequestNavigate="Hyperlink_License_RequestNavigate">Scott's Open Source RPG Engine</Hyperlink>
-            </Label>
-        </Grid>
-        <Button Grid.Row="4" Content="Close" HorizontalAlignment="Right" Width="75" Padding="7" Click="Button_Click"/>
+        
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="lblGameName" HorizontalAlignment="Left"/>
+        <Label Grid.Row="1" Grid.Column="0" x:Name="lblVersionLiteral" HorizontalAlignment="Left"/>
+        <Label Grid.Row="1" Grid.Column="1" x:Name="lblVersion" HorizontalAlignment="Left"/>
+        <Label Grid.Row="2" Grid.Column="0" x:Name="lblCopyrightLiteral" HorizontalAlignment="Left"/>
+        <Label Grid.Row="2" Grid.Column="1" x:Name="lblCopyright" HorizontalAlignment="Left"/>
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <Hyperlink x:Name="hypWebsiteURL" RequestNavigate="NavigateToURL">
+                <TextBlock x:Name="txtWebsiteURL"/>
+            </Hyperlink>
+        </Label>
+        
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnClose" Content="Close" HorizontalAlignment="Right" Width="75" Padding="7" Click="Button_Click"/>
     </Grid>
 </Window>
