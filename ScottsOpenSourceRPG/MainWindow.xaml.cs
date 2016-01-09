@@ -5,21 +5,19 @@ namespace ScottsOpenSourceRPG
 {
     public partial class MainWindow : Window
     {
-        private Game _game;
+        private readonly Game _game;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            _game = new Game("Scott's Open Source C# RPG", 0, 1, 1999,
-                "https://github.com/ScottLilly/ScottsOpenSourceRPG", "Scott's Open Source C# RPG");
+            _game = new Game("Scott's Open Source C# RPG", 
+                "Scott's Open Source C# RPG",
+                "https://github.com/ScottLilly/ScottsOpenSourceRPG", 
+                0, 1, 
+                "Scott Lilly", 2015);
 
-            BindGameToUI();
-        }
-
-        private void BindGameToUI()
-        {
-            Title = _game.Name;
+            DataContext = _game;
         }
 
         private void MenuItem_Exit_OnClick(object sender, RoutedEventArgs e)
@@ -29,7 +27,8 @@ namespace ScottsOpenSourceRPG
 
         private void MenuItem_About_OnClick(object sender, RoutedEventArgs e)
         {
-            About aboutScreen = new About(_game);
+            var aboutScreen = new About(_game);
+            aboutScreen.Owner = this;
             aboutScreen.ShowDialog();
         }
     }

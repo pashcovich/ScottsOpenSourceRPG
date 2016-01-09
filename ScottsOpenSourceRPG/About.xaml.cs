@@ -1,9 +1,7 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Navigation;
 using Engine;
-using ScottsOpenSourceRPG.Resources;
 
 namespace ScottsOpenSourceRPG
 {
@@ -13,21 +11,7 @@ namespace ScottsOpenSourceRPG
         {
             InitializeComponent();
 
-            Title = Literals.About;
-
-            lblGameName.Content = game.Name;
-            lblVersionLiteral.Content = string.Format("{0}: ", Literals.Version);
-            lblVersion.Content = string.Format("{0}: {1}", Literals.Version, game.CurrentVersion);
-            lblCopyrightLiteral.Content = string.Format("{0}: ", Literals.Copyright);
-            lblCopyright.Content =
-                (DateTime.Now.Year > game.CopyrightYear)
-                    ? string.Format("{0}: {1} - {2}", Literals.Copyright, game.CopyrightYear, DateTime.Now.Year)
-                    : string.Format("{0}: {1}", Literals.Copyright, game.CopyrightYear);
-
-            txtWebsiteURL.Text = game.WebsiteName;
-            hypWebsiteURL.NavigateUri = new Uri(game.WebsiteURL);
-
-            btnClose.Content = Literals.Close;
+            DataContext = game;
         }
 
         private void NavigateToURL(object sender, RequestNavigateEventArgs e)
