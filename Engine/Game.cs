@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 
 namespace Engine
 {
@@ -22,16 +23,20 @@ namespace Engine
             }
         }
 
-        public Game(string name, string websiteName, string websiteURL, int majorVersion, int minorVersion,
-            string copyrightHolder, int copyrightYear)
+        public Game(string xmlGameInformation)
         {
-            Name = name;
-            CurrentVersion = new Version(majorVersion, minorVersion);
-            WebsiteURL = websiteURL;
-            WebsiteName = websiteName;
-            CopyrightHolder = copyrightHolder;
+            XmlDocument info = new XmlDocument();
+            info.LoadXml(xmlGameInformation);
 
-            _copyrightYear = copyrightYear;
+            Name = info.SelectSingleNode("/Game/Name").InnerText;
+            WebsiteName = info.SelectSingleNode("/Game/Website/Name").InnerText;
+            WebsiteURL = info.SelectSingleNode("/Game/Website/URL").InnerText;
+            CurrentVersion = new Version(
+                Convert.ToInt32(info.SelectSingleNode("/Game/Version/@Major").InnerText),
+                Convert.ToInt32(info.SelectSingleNode("/Game/Version/@Minor").InnerText));
+
+            CopyrightHolder = info.SelectSingleNode("/Game/Copyright/Holder").InnerText;
+            _copyrightYear = Convert.ToInt32(info.SelectSingleNode("/Game/Copyright/Year").InnerText);
         }
     }
 }

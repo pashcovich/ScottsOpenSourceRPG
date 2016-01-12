@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Game>
+  <Name><![CDATA[Scott's Open Source C# RPG]]></Name>
+  <Version Major="0" Minor="1"/>
+  <Website>
+    <Name><![CDATA[Scott's Open Source C# RPG]]></Name>
+    <URL><![CDATA[https://github.com/ScottLilly/ScottsOpenSourceRPG]]></URL>
+  </Website>
+  <Copyright>
+    <Holder><![CDATA[Scott Lilly]]></Holder>
+    <Year>2015</Year>
+  </Copyright>
+</Game>
