@@ -10,4 +10,16 @@
     <Holder><![CDATA[Scott Lilly]]></Holder>
     <Year>2015</Year>
   </Copyright>
+  <Levels>
+    <Level MaxXP="99">1</Level>
+    <Level MaxXP="299">2</Level>
+    <Level MaxXP="599">3</Level>
+    <Level MaxXP="999">4</Level>
+    <Level MaxXP="1499">5</Level>
+    <Level MaxXP="2099">6</Level>
+    <Level MaxXP="2799">7</Level>
+    <Level MaxXP="3599">8</Level>
+    <Level MaxXP="4499">9</Level>
+    <Level MaxXP="5499">10</Level>
+  </Levels>
 </Game>
