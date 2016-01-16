@@ -5,11 +5,11 @@ using Engine;
 
 namespace ScottsOpenSourceRPG
 {
-    public partial class MainWindow : Window
+    public partial class SOSCSRPG : Window
     {
         private readonly Game _game;
 
-        public MainWindow()
+        public SOSCSRPG()
         {
             InitializeComponent();
 
