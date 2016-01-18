@@ -124,6 +124,15 @@ namespace ScottsOpenSourceRPG.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start New Game.
+        /// </summary>
+        public static string StartNewGame {
+            get {
+                return ResourceManager.GetString("StartNewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Version.
         /// </summary>
         public static string Version {

@@ -11,8 +11,10 @@
             <ColumnDefinition Width="130*"/>
             <ColumnDefinition Width="387*"/>
         </Grid.ColumnDefinitions>
+        
         <Menu Margin="0,1,0,0" FontSize="10pt" Grid.ColumnSpan="2">
             <MenuItem Header="{x:Static resources:Literals.File}" IsCheckable="False">
+                <MenuItem Header="{x:Static resources:Literals.StartNewGame}" IsCheckable="False" Click="MenuItem_NewGame_OnClick"/>
                 <MenuItem Header="{x:Static resources:Literals.LoadGame}" IsCheckable="False"/>
                 <Separator/>
                 <MenuItem Header="{x:Static resources:Literals.Exit}" IsCheckable="False" Click="MenuItem_Exit_OnClick"/>
@@ -23,6 +25,7 @@
                 <MenuItem Header="{x:Static resources:Literals.About}" IsCheckable="False" Click="MenuItem_About_OnClick"/>
             </MenuItem>
         </Menu>
+        
     </Grid>
     
 </Window>

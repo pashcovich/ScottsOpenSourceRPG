@@ -54,6 +54,6 @@
         <Button Grid.Row="4" Grid.Column="1" 
                 HorizontalAlignment="Right" Width="75" Margin="5"
                 Content="{x:Static resources:Literals.Close}" 
-                Click="Button_Click"/>
+                Click="Close_Button_Click"/>
     </Grid>
 </Window>

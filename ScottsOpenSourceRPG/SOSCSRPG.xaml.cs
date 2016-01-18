@@ -35,6 +35,15 @@ namespace ScottsOpenSourceRPG
             DataContext = _game;
         }
 
+        private void MenuItem_NewGame_OnClick(object sender, RoutedEventArgs e)
+        {
+            StartNewGame newGame = new StartNewGame();
+            newGame.Owner = this;
+            newGame.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
+            newGame.ShowDialog();
+        }
+
         private void MenuItem_Exit_OnClick(object sender, RoutedEventArgs e)
         {
             Close();

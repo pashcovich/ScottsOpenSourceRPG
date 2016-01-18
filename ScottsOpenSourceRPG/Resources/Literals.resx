@@ -138,6 +138,9 @@
   <data name="LoadGame" xml:space="preserve">
     <value>Load Game</value>
   </data>
+  <data name="StartNewGame" xml:space="preserve">
+    <value>Start New Game</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>Version</value>
   </data>
