@@ -70,6 +70,33 @@ namespace ScottsOpenSourceRPG.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Accept.
+        /// </summary>
+        public static string Accept {
+            get {
+                return ResourceManager.GetString("Accept", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charisma.
+        /// </summary>
+        public static string Charisma {
+            get {
+                return ResourceManager.GetString("Charisma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string Close {
@@ -79,11 +106,29 @@ namespace ScottsOpenSourceRPG.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Constitution.
+        /// </summary>
+        public static string Constitution {
+            get {
+                return ResourceManager.GetString("Constitution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copyright.
         /// </summary>
         public static string Copyright {
             get {
                 return ResourceManager.GetString("Copyright", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dexterity.
+        /// </summary>
+        public static string Dexterity {
+            get {
+                return ResourceManager.GetString("Dexterity", resourceCulture);
             }
         }
         
@@ -115,6 +160,15 @@ namespace ScottsOpenSourceRPG.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Intelligence.
+        /// </summary>
+        public static string Intelligence {
+            get {
+                return ResourceManager.GetString("Intelligence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load Game.
         /// </summary>
         public static string LoadGame {
@@ -124,11 +178,38 @@ namespace ScottsOpenSourceRPG.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New character.
+        /// </summary>
+        public static string NewCharacter {
+            get {
+                return ResourceManager.GetString("NewCharacter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start New Game.
         /// </summary>
         public static string StartNewGame {
             get {
                 return ResourceManager.GetString("StartNewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strength.
+        /// </summary>
+        public static string Strength {
+            get {
+                return ResourceManager.GetString("Strength", resourceCulture);
             }
         }
         
@@ -147,6 +228,15 @@ namespace ScottsOpenSourceRPG.Resources {
         public static string ViewHelp {
             get {
                 return ResourceManager.GetString("ViewHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wisdom.
+        /// </summary>
+        public static string Wisdom {
+            get {
+                return ResourceManager.GetString("Wisdom", resourceCulture);
             }
         }
     }

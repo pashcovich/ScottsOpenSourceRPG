@@ -3,6 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="SOSCSRPG.xaml">
     <Application.Resources>
-         
+        <Style TargetType="{x:Type Control}" x:Key="rootStyle">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="3"/>
+        </Style>
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource rootStyle}"/>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource rootStyle}"/>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource rootStyle}"/>
+        <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource rootStyle}"/>
+        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource rootStyle}"/>
+        <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource rootStyle}"/>
+        <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource rootStyle}"/>
     </Application.Resources>
 </Application>

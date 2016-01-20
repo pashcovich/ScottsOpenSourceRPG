@@ -7,7 +7,7 @@ namespace ScottsOpenSourceRPG
 {
     public partial class SOSCSRPG : Window
     {
-        private readonly Game _game;
+        private PlayerSession _playerSession;
 
         public SOSCSRPG()
         {
@@ -20,19 +20,27 @@ namespace ScottsOpenSourceRPG
                 if(File.Exists(gameInformationFileName))
                 {
                     var gameInformation = File.ReadAllText(gameInformationFileName);
-                    _game = new Game(gameInformation);
+
+                    SetPlayerSessionGame(new Game(gameInformation));
                 }
                 else
                 {
-
+                    // throw exception
                 }
             }
             catch(Exception ex)
             {
+                // throw exception
                 throw;
             }
 
-            DataContext = _game;
+        }
+
+        private void SetPlayerSessionGame(Game game)
+        {
+            _playerSession = new PlayerSession(game);
+
+            DataContext = _playerSession.Game;
         }
 
         private void MenuItem_NewGame_OnClick(object sender, RoutedEventArgs e)
@@ -42,6 +50,11 @@ namespace ScottsOpenSourceRPG
             newGame.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             newGame.ShowDialog();
+
+            if(newGame.DialogResult.HasValue && newGame.DialogResult.Value)
+            {
+                _playerSession.SetPlayer(newGame.NewPlayer);
+            }
         }
 
         private void MenuItem_Exit_OnClick(object sender, RoutedEventArgs e)
@@ -51,8 +64,9 @@ namespace ScottsOpenSourceRPG
 
         private void MenuItem_About_OnClick(object sender, RoutedEventArgs e)
         {
-            var aboutScreen = new About(_game);
+            var aboutScreen = new About(_playerSession.Game);
             aboutScreen.Owner = this;
+
             aboutScreen.ShowDialog();
         }
     }
