@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Collections\RandomDistributionList.cs" />
     <Compile Include="Collections\SortedListWithFloorAndCeilingIntegerKey.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Entities\Armor.cs" />
     <Compile Include="Entities\ConsumableItem.cs" />
     <Compile Include="Entities\Coordinate.cs" />
