@@ -35,6 +35,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Mutable\ConsumableItem.cs" />
+    <Compile Include="Models\Mutable\GameItem.cs" />
+    <Compile Include="Models\Mutable\ArmorPiece.cs" />
+    <Compile Include="Models\Mutable\JeweleryPiece.cs" />
+    <Compile Include="Models\Mutable\Weapon.cs" />
+    <Compile Include="Models\Mutable\WearableItem.cs" />
     <Compile Include="ReferenceData.cs" />
     <Compile Include="Models\Mutable\BaseModel.cs" />
     <Compile Include="Resources\Text\Locations.Designer.cs">
