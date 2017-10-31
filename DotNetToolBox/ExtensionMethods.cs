@@ -115,7 +115,7 @@ namespace DotNetToolBox
 
         public static bool ContainsALowerCaseCharacter(this string obj)
         {
-            return obj.ContainsUpperCaseCharacters(1);
+            return obj.ContainsLowerCaseCharacters(1);
         }
 
         public static bool ContainsLowerCaseCharacters(this string obj, int minimumNumberofLowerCaseCharacters)
